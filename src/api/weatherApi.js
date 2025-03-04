@@ -1,9 +1,5 @@
-/**
- * Weather API service for fetching data from OpenWeatherMap
- */
 
-// This should be stored in .env file in a real project
-const API_KEY = '2b7349a9d34d34d4ab087bb218d12267';
+const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 /**

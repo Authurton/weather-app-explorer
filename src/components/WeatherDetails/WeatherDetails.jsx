@@ -34,13 +34,10 @@ const WeatherDetails = ({
     getWeatherData();
   }, [location, onError, setIsLoading, setWeatherData]); 
   
-
-  // Format temperature to show one decimal place
   const formatTemp = (temp) => {
     return Math.round(temp * 10) / 10;
   };
 
-  // Get weather icon URL
   const getWeatherIconUrl = (iconCode) => {
     return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
   };
