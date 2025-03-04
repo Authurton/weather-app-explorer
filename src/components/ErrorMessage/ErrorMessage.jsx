@@ -4,22 +4,20 @@ import './ErrorMessage.css';
 const ErrorMessage = ({ message, onDismiss, duration = 5000 }) => {
   const [isVisible, setIsVisible] = useState(true);
 
-  // Auto-dismiss after duration
   useEffect(() => {
     if (!duration) return;
     
     const timer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(onDismiss, 300); // Wait for animation to complete
+      setTimeout(onDismiss, 300); 
     }, duration);
     
     return () => clearTimeout(timer);
   }, [duration, onDismiss]);
 
-  // Handle manual dismiss
   const handleDismiss = () => {
     setIsVisible(false);
-    setTimeout(onDismiss, 300); // Wait for animation to complete
+    setTimeout(onDismiss, 300);
   };
 
   return (
